@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>アクセス数</title>
+</head>
+<body>
+    <p>アクセス数: <span th:text="${count}">ここがcountで置き換わる</span></p>
+    <p>アクセス数: <span th:text="${count}" th:remove="tag">ここがcountで置き換わる</span></p>
+    <p>アクセス数: <th:block th:text="${count}">ここがcountで置き換わる</th:block></p>
+    <p>アクセス数: [[${count}]]</p> <!-- [[${count}]]がcountで置き換わる -->
+</body>
+</html>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>おみくじ</title>
+    <style>
+        strong {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <p>あなたの運勢は<strong th:text="${result}">ここにresult</strong>です。</p>
+</body>
+</html>
