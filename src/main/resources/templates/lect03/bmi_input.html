@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>BMI計算を計算（入力）</title>
+</head>
+<body>
+    <h1>BMIを計算（入力）</h1>
+
+    <h2>GETメソッドの場合</h2>
+    <form action="/lect03/bmi_output" method="get">
+        身長 <input type="text" name="height"> cm<br/>
+        体重 <input type="text" name="weight"> kg<br/>
+        <input type="submit">
+    </form>
+
+    <h2>POSTメソッドの場合</h2>
+    <form action="/lect03/bmi_output" method="post">
+        身長 <input type="text" name="height"> cm<br/>
+        体重 <input type="text" name="weight"> kg<br/>
+        <input type="submit">
+    </form>
+</body>
+</html>
