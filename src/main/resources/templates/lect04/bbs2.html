@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>掲示板</title>
+</head>
+<body>
+    <h1>掲示板</h1>
+
+    <dl>
+        <th:block th:each="comment,iterStat:${commentList}">
+            <dt>
+                [[${iterStat.index}]] 名前：<span style="color: green;"><b th:text="${comment.name}"></b></span> [[${#dates.format(comment.date, 'yyyy/MM/dd HH:mm')}]]
+            </dt>
+            <dd th:text="${comment.comment}"></dd>
+        </th:block>
+    </dl>
+
+    <form method="post" action="/lect04/add_comment2">
+        <p>
+            <input type="submit" value="書き込む" name="submit"><br>
+            名前：<input type="text" name="name"><br>
+            <textarea name="comment"></textarea><br>
+        </p>
+    </form>
+</body>
+</html>

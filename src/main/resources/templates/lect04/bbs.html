@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>掲示板</title>
+</head>
+<body>
+    <h1>掲示板</h1>
+
+    <ul>
+        <li th:each="comment:${commentList}">
+            <span th:text="${comment}">ここがcommentで置き換わる</span>
+        </li>
+    </ul>
+
+    <form action="/lect04/add_comment" method="post">
+        コメント <input type="text" name="comment" width="300"> <input type="submit">
+    </form>
+</body>
+</html>
