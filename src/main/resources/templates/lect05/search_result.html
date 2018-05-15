@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>辞書</title>
+</head>
+<body>
+    <h1>辞書: 検索</h1>
+
+    <p th:if="${japanese != null}">
+        「<span th:text="${english}">english</span>」の日本語は「<span th:text="${japanese}">japanese</span>」です。
+    </p>
+    <p th:if="${japanese == null}">
+        「<span th:text="${english}">english</span>」の日本語は登録されていません。
+    </p>
+
+    <hr/>
+    <nav th:include="lect05/common::menu"></nav>
+</body>
+</html>

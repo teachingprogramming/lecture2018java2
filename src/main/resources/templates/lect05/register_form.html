@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>辞書</title>
+</head>
+<body>
+    <h1>辞書: 登録</h1>
+
+    <form action="/lect05/register_result" method="post">
+        <label>
+            英語: <input type="text" name="english" width="300">
+        </label><br/>
+        <label>
+            日本語: <input type="text" name="japanese" width="300">
+        </label><br/>
+        <input type="submit"/>
+    </form>
+
+    <hr/>
+    <nav th:include="lect05/common::menu"></nav>
+</body>
+</html>
