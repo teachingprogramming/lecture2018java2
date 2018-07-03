@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>ユーザ追加</title>
+</head>
+<body>
+<h1>ユーザ認証サンプル</h1>
+<h2>ユーザ追加</h2>
+<form th:action="@{/auth/add_user}" method="post">
+    ユーザ名: <input name="username"/><br/>
+    パスワード: <input name="password" type="password"/><br/>
+    ロール: <select name="role"><option value="USER">一般ユーザ</option><option value="ADMIN">管理者</option></select><br/>
+    <button type="submit">追加</button>
+</form>
+</body>
+</html>
