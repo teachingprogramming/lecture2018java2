@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>メール送信</title>
+</head>
+<body>
+<h1>メール送信サンプル</h1>
+<form th:action="@{/mail/send}" method="post">
+    <dl>
+        <dt>to</dt>
+        <dd><input name="to" type="email" style="width: 400px"/></dd>
+        <dt>subject</dt>
+        <dd><input name="subject" type="text" style="width: 400px"/></dd>
+        <dt>text</dt>
+        <dd><textarea name="text" style="width: 400px; height: 200px"></textarea></dd>
+    </dl>
+    <button type="submit">送信</button>
+</form>
+</body>
+</html>
