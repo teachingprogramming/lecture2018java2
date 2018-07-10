@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>日付に関するサンプル</title>
+</head>
+<body>
+
+<h1>日付に関するサンプル</h1>
+
+<h2>入力（フォーム）</h2>
+
+<form th:action="@{/date/process}" method="post">
+    <dl>
+        <dt>日付1（年月日）</dt>
+        <dd><input type="date" name="date1"></dd>
+
+        <dt>日付2（年月日+時刻）</dt>
+        <dd><input type="datetime-local" name="date2"></dd>
+    </dl>
+    <button type="submit">送信</button>
+</form>
+
+</body>
+</html>

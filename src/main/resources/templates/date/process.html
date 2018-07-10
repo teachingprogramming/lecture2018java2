@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>日付に関するサンプル</title>
+</head>
+<body>
+
+<h1>日付に関するサンプル</h1>
+
+<h2>処理（フォームから受け取り表示）</h2>
+
+<dl>
+    <dt>日付1（年月日）</dt>
+    <dd>
+        <th:block th:text="${#dates.format(date1, 'yyyy年MM月dd日')}">ここが日付1で置き換わる</th:block>
+    </dd>
+    <dt>日付2（年月日+時刻）</dt>
+    <dd>
+        <th:block th:text="${#dates.format(date2, 'yyyy年MM月dd日HH時mm分')}">ここが日付1で置き換わる</th:block>
+    </dd>
+</dl>
+
+</body>
+</html>
